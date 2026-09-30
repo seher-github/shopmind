@@ -6,10 +6,10 @@ from agents.safety_agent import create_safety_agent
 
 def get_llm() -> LLM:
     return LLM(
-        model="llama-3.3-70b-versatile",          # no "groq/" prefix
+        model="llama-3.1-8b-instant",               # currently available on free tier
         api_key=st.secrets["GROQ_API_KEY"],
         base_url="https://api.groq.com/openai/v1",
-        custom_openai=True,                      # important
+        custom_openai=True,
         temperature=0.2,
     )
 
