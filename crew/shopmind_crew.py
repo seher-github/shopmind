@@ -6,7 +6,7 @@ from agents.safety_agent import create_safety_agent
 
 def get_llm() -> LLM:
     return LLM(
-        model="openai/gpt-oss-20b",               # currently available on free tier
+        model="openai/gpt-oss-20b",                 # full model ID (required)
         api_key=st.secrets["GROQ_API_KEY"],
         base_url="https://api.groq.com/openai/v1",
         custom_openai=True,
